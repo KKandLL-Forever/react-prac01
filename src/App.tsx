@@ -3,7 +3,7 @@ import './index.css'
 import Header from '@/views/Header'
 import Tabs from '@/views/Tabs'
 import CommentSend from '@/views/CommentSend'
-import CommentList from "@/views/CommentList";
+import CommentList from "@/views/CommentList/CommentList";
 
 // 依赖的数据
 const state = {
@@ -55,7 +55,7 @@ const App: React.FC = () => {
         {/* 评论数 */}
         <Header/>
         {/* 排序 */}
-        <Tabs/>2
+        <Tabs/>
         {/* 添加评论 */}
         <CommentSend/>
         {/* 评论列表 */}
