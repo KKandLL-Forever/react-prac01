@@ -1,8 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import avatar from "@/images/avatar.png";
 import {useStore} from "@/store/root.Store";
 import {observer} from "mobx-react-lite";
-import classnames from 'classnames'
 import {action} from "mobx";
 
 const CommentList: React.FC = (props) => {
@@ -22,13 +21,13 @@ const CommentList: React.FC = (props) => {
         <div className="info">
           <span className="time">{item.time}</span>
           <span
-            className={'like'+ `${item.attitude === 1 ? ' liked' : ''}` }
+            className={`like${item.attitude === 1 ? ' liked' : ''}` }
             onClick={action(() => item.attitude = 1)}
           >
             <i className="icon"/>
           </span>
           <span
-            className={'hate'+ `${item.attitude === -1 ? ' hated' : ''}` }
+            className={`hate${item.attitude === -1 ? ' hated' : ''}` }
             onClick={action(() => item.attitude = -1)}
           >
             <i className="icon"/>
