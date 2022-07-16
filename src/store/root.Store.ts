@@ -1,8 +1,10 @@
 import {createContext, useContext} from "react";
-import { listStore, ListStore } from './list.Store'
+import { listStore } from './list.Store'
+import { tabStore } from './tab.Store'
 
 class RootStore {
   listStore = listStore
+  tabStore = tabStore
   // constructor() {
   //   this.listStore = listStore
   // }

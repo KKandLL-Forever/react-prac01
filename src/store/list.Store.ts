@@ -1,4 +1,4 @@
-import {computed, makeAutoObservable, runInAction} from 'mobx'
+import {makeAutoObservable, runInAction} from 'mobx'
 import avatar from '@/images/avatar.png'
 import {v4} from 'uuid'
 
@@ -10,7 +10,7 @@ export interface IList {
   attitude: number
 }
 
-export class ListStore {
+class ListStore {
   loading: boolean = false
   avatar = avatar
   inputValue: string = ''
